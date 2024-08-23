@@ -1,0 +1,50 @@
+package com.vueling.AbstractComponents;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class AbstractComponents {
+	
+	WebDriver driver;
+	
+	public AbstractComponents(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="(//*[@id=\"vy-header_links\"]/li[1]/a/span[1])[1]")
+	WebElement booknowHeader;
+	
+	public void goToBooknowPage() {
+		booknowHeader.click();
+	}
+	
+	public WebElement waitForElementToAppear(By findBy, int duration) throws InterruptedException {
+		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+//		return wait.until(ExpectedConditions.elementToBeClickable(findBy));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+	}
+	
+	public WebElement waitForElementToAppearByElement(WebElement element, int duration) {
+		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		return wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public WebElement waitForElementToBeClickable(WebElement element, int duration) {
+		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		return wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
+	public void waitForURL(String partialURL, int duration) {
+		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		wait.until(ExpectedConditions.urlContains(partialURL));
+	}
+}

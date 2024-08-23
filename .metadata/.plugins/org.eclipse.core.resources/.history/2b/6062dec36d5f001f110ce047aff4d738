@@ -1,0 +1,24 @@
+package com.vueling.pageactions;
+
+import org.openqa.selenium.WebDriver;
+
+import com.vueling.pageobjects.ServicesPageObjects;
+
+public class ServicesPageActions extends ServicesPageObjects{
+	
+	WebDriver driver;
+
+	public ServicesPageActions(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+	}
+
+	public PaymentPageActions selectServices() throws InterruptedException {
+//		Thread.sleep(3000);
+		waitForElementToBeClickable(continueButton, 10).click();		
+//		continueButton.click();
+
+		return (new PaymentPageActions(driver));
+	}
+
+}

@@ -1,0 +1,56 @@
+package com.vueling.pageactions;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.vueling.pageobjects.MainPageObjects;
+
+public class MainPageActions extends MainPageObjects{
+	
+	WebDriver driver;
+
+	public MainPageActions(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+	}
+
+	public void goTo() {
+		driver.get("https://www.vueling.com/en");
+	}
+	
+	private void popupDropdownSelect(String result) {
+		for (WebElement element : popupDropdown) {
+			if(element.getText().split(",")[0].equalsIgnoreCase(result)) {
+				element.click();
+				break;
+			};
+		}
+	}
+	
+//	public List<WebElement> getProductList() throws InterruptedException {
+//		waitForElementToAppear(popupDropdownLocator, 5);	
+//		
+//		return popupDropdown;
+//	}
+//	
+//	private void popupDropdownSelect1(String result) throws InterruptedException {
+//		WebElement prod = getProductList().stream().parallel().filter(product->
+//		product.findElement(popupDropdownLocator).getText().split(",")[0].equalsIgnoreCase(result)).findFirst().orElse(null);
+//
+//		prod.click();
+//	}
+	
+	public void selectFlight(String originSearch, String originResult, String destinationResult) throws InterruptedException {
+		acceptCookiesButton.click();
+		originInput.click();
+		originInput.sendKeys(originSearch);
+		globalSwitchButton.click();	
+		popupDropdownSelect(originResult);
+		popupDropdownSelect(destinationResult);
+		//calendarSwitchButton.click();
+		availableDates.get(0).click();
+	}
+
+}

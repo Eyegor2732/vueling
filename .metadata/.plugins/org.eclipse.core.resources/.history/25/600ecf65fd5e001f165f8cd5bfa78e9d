@@ -1,0 +1,86 @@
+package com.vueling.pageobjects;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.vueling.AbstractComponents.AbstractComponents;
+
+public class MainPageObjects extends AbstractComponents{
+	
+WebDriver driver;
+	
+	public MainPageObjects(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+//	@FindBy(id="originInput")
+//	protected
+//	WebElement originInput;
+//	
+//	@FindBy(id="destinationInput")
+//	protected
+//	WebElement destinationInput;
+//	
+//	@FindBy(id="outboundDate")
+//	protected
+//	WebElement outboundDateInput;
+//	
+//	@FindBy(id="returnDate")
+//	protected
+//	WebElement returnDateInput;
+//	
+//	@FindBy(css=".passengers")
+//	protected
+//	WebElement passengersInput;
+//	
+//	@FindBy(css=".ds-icon-search")
+//	protected
+//	WebElement searchButton;
+	
+	@FindBy(id="onetrust-accept-btn-handler")
+	protected
+	WebElement acceptCookiesButton;
+	
+//	@FindBy(css=".cities-sugestion-popup button.vy-switch_button .vy-switch_pin")
+//	protected
+//	WebElement globalSwitchButton;
+//	
+//	@FindBy(css="[role='option']")
+//	protected
+//	List<WebElement> popupDropdown;
+//	
+//	@FindBy(css=".vy-switch button")
+//	protected
+//	WebElement calendarSwitchButton;
+//	
+//	@FindBy(css="td[aria-disabled='false']")
+//	protected
+//	List<WebElement> availableDates;
+//	
+//	@FindBy(css="[aria-label='Passengers']")
+//	protected
+//	WebElement passengrersInput;
+//	
+//	@FindBy(css="[aria-label*='Adults'] [aria-label*='Add']")
+//	protected
+//	WebElement adultAddButton;
+//	
+//	@FindBy(css="[aria-label*='Adults'] [role='status']")
+//	protected
+//	WebElement adultCounter;
+//	
+//	 
+//	protected
+//	By popupDropdownLocator = By.cssSelector("[role='option']");
+//	
+//	protected
+//	By availableDatesLocator = By.cssSelector("td[aria-disabled='false']");
+
+}

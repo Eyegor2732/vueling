@@ -1,0 +1,32 @@
+package com.vueling.pageobjects;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.vueling.AbstractComponents.AbstractComponents;
+
+public class ServicesPageObjects extends AbstractComponents{
+	
+WebDriver driver;
+	
+	public ServicesPageObjects(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	@FindBy(css="[id='serviceButton'] [id$='LinkButtonSubmit']")
+	protected
+	WebElement continueButton;
+
+	
+	
+
+
+}

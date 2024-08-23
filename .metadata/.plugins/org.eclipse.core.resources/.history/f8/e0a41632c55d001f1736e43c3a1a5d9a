@@ -1,0 +1,41 @@
+package com.vueling.pageactions;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.vueling.pageobjects.PassengersPageObjects;
+import com.vueling.pageobjects.SchedulePageObjects;
+
+public class PassengersPageActions extends PassengersPageObjects{
+	
+	WebDriver driver;
+
+	public PassengersPageActions(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+	}
+
+	public BagsservicePageActions enterPaxInformation(String name, String surname, String country, String phone, String email) throws InterruptedException {
+//		waitForElementToAppear(acceptPrivacyButtonLocator, 5).click();
+//		acceptPrivacyButton.click();
+		paxFirstNameInput.sendKeys(name);
+		paxSurNameInput.sendKeys(surname);
+		allsetButton.click();
+		Thread.sleep(1000);
+		countryDropdown.sendKeys(country);
+		phoneInput.sendKeys(phone);
+		emailInput.sendKeys(email);
+		privacyCheckbox.click();
+		continueButton.click();
+		
+		Thread.sleep(3000);
+		return (new BagsservicePageActions(driver));
+		
+		
+	}
+
+}
+
+
