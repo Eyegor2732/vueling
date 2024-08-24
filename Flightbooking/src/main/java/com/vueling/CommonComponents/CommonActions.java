@@ -35,7 +35,7 @@ public class CommonActions extends CommonObjects{
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	public WebElement waitForElementToBeClickable(WebElement element, int duration) {
+	public WebElement waitForElementToBeClickableByElement(WebElement element, int duration) {
 		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
 		return wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
@@ -44,4 +44,15 @@ public class CommonActions extends CommonObjects{
 		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
 		wait.until(ExpectedConditions.urlContains(partialURL));
 	}
+	
+	public void waitForElementToBeClickableByLocator(By findBy, int duration) {
+		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		wait.until(ExpectedConditions.elementToBeClickable(findBy));
+	}
+	
+	public void waitforElementToDisappear(By findBy, int duration) {
+		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(findBy));
+	}
+	
 }

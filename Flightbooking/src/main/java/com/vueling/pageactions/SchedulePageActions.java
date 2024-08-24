@@ -1,5 +1,6 @@
 package com.vueling.pageactions;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.vueling.pageobjects.SchedulePageObjects;
@@ -26,14 +27,12 @@ public class SchedulePageActions extends SchedulePageObjects{
 		actualReturnDayText = returnDayButton.getText();		
 		outboundTicket.get(0).click();
 		returnTicket.get(0).click();
-		//waitForElementToAppear(flyButtonLocator, 10);
-		Thread.sleep(2000);
-		flyButton.click();	
-//		waitForElementToAppear(continueButtonLocator, 10);
-		Thread.sleep(2000);
+		waitforElementToDisappear(circleLocator, 5);
+		flyButton.click();
+		waitForElementToAppear(continueButtonLocator, 10);
 		continueButton.click();
 
 		return (new PassengersPageActions(driver));
 	}
 
-}
+} 

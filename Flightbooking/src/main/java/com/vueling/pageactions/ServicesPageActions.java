@@ -18,7 +18,7 @@ public class ServicesPageActions extends ServicesPageObjects{
 		waitForURL("Services", 5);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("window.scrollBy(0, 500)");
-        waitForElementToBeClickable(continueButton, 10).click();
+        waitForElementToBeClickableByElement(continueButton, 10).click();
 		continueButton.click();
 		
 		return (new PaymentPageActions(driver));

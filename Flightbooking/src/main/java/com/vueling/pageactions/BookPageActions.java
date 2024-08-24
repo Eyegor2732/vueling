@@ -8,7 +8,7 @@ import com.vueling.pageobjects.BookPageObjects;
 public class BookPageActions extends BookPageObjects{
 	
 	WebDriver driver;
-
+	
 	public BookPageActions(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -46,7 +46,7 @@ public class BookPageActions extends BookPageObjects{
 	public String expectedReturnMonthText = "";
 	public String expectedReturnDayText = "";
 	
-	public SchedulePageActions findFlight(String originSearch, String originResult, String destinationSearch, String destinationResult, String adultPassengers) throws InterruptedException {
+	public SchedulePageActions findFlight(String originSearch, String originResult, String destinationSearch, String destinationResult, String adultPassengers) throws InterruptedException {	
 		waitForURL("find-your-flight", 5);
 		originInput.click();
 		originInput.sendKeys(originSearch);			
@@ -57,20 +57,17 @@ public class BookPageActions extends BookPageObjects{
 		popupDropdownSelect(destinationResult);
 		calendarTwoWaySwitch();
 		waitForElementToAppear(outboundTitleLocator, 5);
-//		waitForElementToAppear(originMonthLocator, 5);
-		Thread.sleep(1000);
+		Thread.sleep(1000);	
+		waitforElementToDisappear(circleLocator, 5);
 		originMonth.click();
 		waitForElementToAppear(returnTitleLocator, 5);
-//		waitForElementToAppear(returnMonthLocator, 5);
-		Thread.sleep(1000);
 		returnMonth.click();
 		passengrersInput.click();
 		addAdults(adultPassengers);
 		searchButton.click();
 		searchButton.click();
 		originDay.click();
-		returnDay.click();
-		
+		returnDay.click();	
 		expectedOriginMonthText = originMonthButton.getText();
 		expectedOriginDayText = originDayButton.getText();	
 		expectedReturnMonthText = returnMonthButton.getText();

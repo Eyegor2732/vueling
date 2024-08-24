@@ -57,10 +57,15 @@ WebDriver driver;
 	By acceptPrivacyButtonLocator = By.cssSelector("data-testid='uc-container'");
 	
 	protected
-	By flyButtonLocator = By.xpath("//div[contains(@class, 'selected')]//span[contains(@class, 'btn')]");
+//	By flyButtonLocator = By.xpath("//div[contains(@class, 'selected')]//span[contains(@class, 'btn')]");
+	By flyButtonLocator = By.xpath("(//span[@data-js-id=\"bundle-VCB3\"])[2]");
+
 	
 	protected
 	By continueButtonLocator = By.id("stvContinueButton");
+	
+	protected
+	By circleLocator = By.xpath("//div[@class='circle']");
 	
 	
 
