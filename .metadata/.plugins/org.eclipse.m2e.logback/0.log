@@ -3357,3 +3357,49 @@
 2024-08-24 10:00:38,545 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
 2024-08-24 10:00:38,546 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2024-08-24 10:00:38,546 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-24 10:07:39,821 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:07:39,859 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-24 10:07:39,862 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:07:39,862 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-24 10:09:09,001 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:09:09,002 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-24 10:09:09,002 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:09:09,002 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-24 10:12:21,551 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:12:21,553 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-24 10:12:21,554 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:12:21,554 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-24 10:14:03,612 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:14:03,613 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-24 10:14:03,614 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:14:03,614 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-24 10:16:40,105 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:16:40,106 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-24 10:16:40,107 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-24 10:16:40,107 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-25 15:06:50,956 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-08-27 17:32:16,999 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-08-27 18:25:33,134 [Worker-31: Launching PurchaseTicketTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:25:33,135 [Worker-31: Launching PurchaseTicketTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-27 18:25:33,137 [Worker-31: Launching PurchaseTicketTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:25:33,138 [Worker-31: Launching PurchaseTicketTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-27 18:28:16,630 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:28:16,631 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-27 18:28:16,632 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:28:16,632 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-27 18:28:44,862 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:28:44,863 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-27 18:28:44,865 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:28:44,865 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-27 18:29:27,346 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:29:27,347 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-27 18:29:27,348 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:29:27,348 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-27 18:31:57,026 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:31:57,027 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-27 18:31:57,029 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:31:57,029 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources
+2024-08-27 18:32:30,435 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:32:30,436 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/main/resources
+2024-08-27 18:32:30,437 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-08-27 18:32:30,437 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/michaels-mac-mini/Desktop/Vueling/Flightbooking/src/test/resources

@@ -20,8 +20,6 @@ public class PaymentPageActions extends PaymentPageObjects{
 		cardholderInput.sendKeys(cardHolder);
 		expiryInput.sendKeys(expiry);
 		cvvInput.sendKeys(cvv);
-//		waitForElementToAppear(currencyRadioLocator, 10);
-//		currencyRadio.click();
 		legalCheckbox.click();
 		continueButton.click();
 	}

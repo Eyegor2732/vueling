@@ -17,7 +17,6 @@ WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	//@FindBy(css="#ContactViewControlGroupMainContact_BoxPassengerInformationView_TextBoxFirstName_0")
 	@FindBy(xpath="(//*[@data_assignable=\"true\"])[1]")
 	protected
 	WebElement availableSeat;

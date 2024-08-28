@@ -18,7 +18,6 @@ WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	//@FindBy(css="#ContactViewControlGroupMainContact_BoxPassengerInformationView_TextBoxFirstName_0")
 	@FindBy(css="[id*='TextBoxFirstName_0']")
 	protected
 	WebElement paxFirstNameInput;
