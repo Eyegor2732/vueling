@@ -18,7 +18,7 @@ public class ExtentReporterNG {
 		ExtentReports report = new ExtentReports();
 		report.attachReporter(reporter);
 		report.setSystemInfo("Tester", "Eyegor");
-//		report.createTest(reportPath);
+		report.createTest(reportPath);
 		
 		return report;
 	}

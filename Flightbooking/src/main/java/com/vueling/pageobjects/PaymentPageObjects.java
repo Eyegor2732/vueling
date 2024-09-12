@@ -38,7 +38,7 @@ WebDriver driver;
 	protected
 	WebElement cvvInput;
 	
-	@FindBy(css="label[for$='LegalConditions']")
+	@FindBy(css="[for*=\"CheckboxConditionsPaymentView\"]")
 	protected
 	WebElement legalCheckbox;
 	

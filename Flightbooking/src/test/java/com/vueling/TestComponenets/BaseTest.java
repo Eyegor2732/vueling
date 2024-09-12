@@ -31,22 +31,21 @@ import com.vueling.pageactions.MainPageActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class BaseTest {
+public class BaseTest extends OSUtils{
 	public WebDriver driver;
 	public MainPageActions mainpageactions;
+
 
 	private WebDriver initializeDriver() throws IOException {
 
 		// properties
-		OSUtils osutils = new OSUtils();
 
 		Properties prop = new Properties();
-		String userDir = osutils.getUserDirectory();
 		FileInputStream fis = new FileInputStream(
 				userDir + "/src/main/java/com/vueling/resources/GlobalData.properties");
 		prop.load(fis);
 //		String browserName = prop.getProperty("browser");
-		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
+		String browserName = systemBrowser != null ? systemBrowser : prop.getProperty("browser");
 
 		switch (browserName.toLowerCase()) {
 			case "cromeheadless" -> {
@@ -76,7 +75,7 @@ public class BaseTest {
 				driver = new EdgeDriver();
 			}
 			case "safari" -> {
-				if (osutils.isWindows()) {
+				if (isWindows()) {
 					WebDriverManager.edgedriver().setup();
 					driver = new EdgeDriver();
 				} else {
@@ -85,10 +84,10 @@ public class BaseTest {
 				}
 			}
 			default -> {
-				if (osutils.isWindows()) {
+				if (isWindows()) {
 					WebDriverManager.edgedriver().setup();
 					driver = new EdgeDriver();
-				} else if (osutils.isMac()) {
+				} else if (isMac()) {
 					WebDriverManager.safaridriver().setup();
 					driver = new SafariDriver();
 				}
@@ -110,7 +109,6 @@ public class BaseTest {
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		String userDir = System.getProperty("user.dir");
 		String filePath = userDir + "/reports/" + testCaseName + ".png";
 		File file = new File(filePath);
 		FileUtils.copyFile(src, file);
@@ -133,14 +131,6 @@ public class BaseTest {
 		return data;
 	}
 	
-//	@BeforeMethod(alwaysRun=true)
-//	public MainPage launchApp() throws IOException {
-//		driver = initializeDriver();
-//		mainpage = new MainPage(driver);
-//		mainpage.goTo();
-//		return mainpage;
-//	}
-	
 	@BeforeMethod(alwaysRun=true)
 	public MainPageActions launchApp() throws IOException {
 		driver = initializeDriver();
@@ -152,7 +142,7 @@ public class BaseTest {
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(3000);
-		//driver.quit();
+		driver.quit();
 	}
 
 }

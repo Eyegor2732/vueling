@@ -25,8 +25,4 @@ WebDriver driver;
 	protected
 	WebElement continueButton;
 
-	
-	
-
-
 }

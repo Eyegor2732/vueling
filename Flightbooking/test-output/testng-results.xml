@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-27T18:25:35 EDT" name="Default suite" finished-at="2024-08-27T18:27:06 EDT" duration-ms="91187">
+  <suite started-at="2024-09-11T22:13:17 EDT" name="Suite" finished-at="2024-09-11T22:14:18 EDT" duration-ms="60856">
     <groups>
     </groups>
-    <test started-at="2024-08-27T18:25:35 EDT" name="Default test" finished-at="2024-08-27T18:27:06 EDT" duration-ms="91187">
+    <test started-at="2024-09-11T22:13:17 EDT" name="Test" finished-at="2024-09-11T22:14:18 EDT" duration-ms="60856">
       <class name="com.vueling.tests.PurchaseTicketTest">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.vueling.tests.PurchaseTicketTest@78691363]" started-at="2024-08-27T18:25:35 EDT" name="launchApp" finished-at="2024-08-27T18:25:48 EDT" duration-ms="12735" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.vueling.tests.PurchaseTicketTest@147e2ae7]" started-at="2024-09-11T22:13:17 EDT" name="launchApp" finished-at="2024-09-11T22:13:20 EDT" duration-ms="3539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="purchaseTicketTest(java.util.HashMap)[pri:0, instance:com.vueling.tests.PurchaseTicketTest@78691363]" started-at="2024-08-27T18:25:48 EDT" name="purchaseTicketTest" data-provider="getData" finished-at="2024-08-27T18:27:03 EDT" duration-ms="75122" status="PASS">
+        <test-method signature="purchaseTicketTest(java.util.HashMap)[pri:0, instance:com.vueling.tests.PurchaseTicketTest@147e2ae7]" started-at="2024-09-11T22:13:20 EDT" name="purchaseTicketTest" data-provider="getData" finished-at="2024-09-11T22:14:13 EDT" duration-ms="52966" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,11 +22,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- purchaseTicketTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.vueling.tests.PurchaseTicketTest@78691363]" started-at="2024-08-27T18:27:03 EDT" name="tearDown" finished-at="2024-08-27T18:27:06 EDT" duration-ms="3006" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.vueling.tests.PurchaseTicketTest@147e2ae7]" started-at="2024-09-11T22:14:13 EDT" name="tearDown" finished-at="2024-09-11T22:14:18 EDT" duration-ms="4230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.vueling.tests.PurchaseTicketTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

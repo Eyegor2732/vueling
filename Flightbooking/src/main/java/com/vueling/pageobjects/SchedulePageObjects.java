@@ -66,7 +66,4 @@ WebDriver driver;
 	protected
 	By circleLocator = By.xpath("//div[@class='circle']");
 	
-	
-
-
 }
