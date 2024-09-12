@@ -1,0 +1,8 @@
+.metadata
+.DS_Store
+/test-output/
+/target/
+/reports/
+test-output/
+target/
+reports/

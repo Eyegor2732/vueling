@@ -9,18 +9,18 @@ public class OSUtils {
 	      return OS;
 	   }
 
-	   protected boolean isWindows()
+	   protected static boolean isWindows()
 	   {
 	      return getOsName().startsWith("Windows");
 	   }
 
-	   protected boolean isMac()
+	   protected static boolean isMac()
 	   {
 	      return getOsName().startsWith("Mac");
 	   }
 	      
-	   protected String systemBrowser = System.getProperty("browser");
+	   protected static final String systemBrowser = System.getProperty("browser");
 	   
-	   protected String userDir = System.getProperty("user.dir");
+	   protected static final String userDir = System.getProperty("user.dir");
 
 }
