@@ -20,7 +20,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -30,120 +29,112 @@ import com.vueling.pageactions.MainPageActions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
-public class BaseTest extends OSUtils{
+public class BaseTest extends OSUtils {
 	public WebDriver driver;
 	public MainPageActions mainpageactions;
 
-
 	private WebDriver initializeDriver() throws IOException {
-
-		// properties
 
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				userDir + "/src/main/java/com/vueling/resources/GlobalData.properties");
 		prop.load(fis);
-//		String browserName = prop.getProperty("browser");
+
 		String browserName = systemBrowser != null ? systemBrowser : prop.getProperty("browser");
 
 		switch (browserName.toLowerCase()) {
-			case "cromeheadless" -> {
-				ChromeOptions options = new ChromeOptions();		
-				WebDriverManager.chromedriver().setup();
-				options.addArguments("headless");
-				driver = new ChromeDriver(options);
-				driver.manage().window().setSize(new Dimension(1440, 900));
+		case "cromeheadless" -> {
+			ChromeOptions options = new ChromeOptions();
+			WebDriverManager.chromedriver().setup();
+			options.addArguments("headless");
+			driver = new ChromeDriver(options);
+			driver.manage().window().setSize(new Dimension(1440, 900));
+		}
+		case "chrome" -> {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		}
+		case "firefox" -> {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		}
+		case "edgeheadless" -> {
+			EdgeOptions options = new EdgeOptions();
+			options.addArguments("headless");
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver(options);
+			driver.manage().window().setSize(new Dimension(1440, 900));
+		}
+		case "edge" -> {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
+		case "safari" -> {
+			if (isWindows()) {
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
+			} else {
+				WebDriverManager.safaridriver().setup();
+				driver = new SafariDriver();
 			}
-			case "chrome" -> {
+		}
+		default -> {
+			if (isWindows()) {
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
+			} else if (isMac()) {
+				WebDriverManager.safaridriver().setup();
+				driver = new SafariDriver();
+			} else {
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 			}
-			case "firefox" -> {
-				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
-			}
-			case "edgeheadless" -> {
-				EdgeOptions options = new EdgeOptions();
-				options.addArguments("headless");
-				WebDriverManager.edgedriver().setup();
-				driver = new EdgeDriver(options);
-				driver.manage().window().setSize(new Dimension(1440, 900));
-			}
-			case "edge" -> {
-				WebDriverManager.edgedriver().setup();
-				driver = new EdgeDriver();
-			}
-			case "safari" -> {
-				if (isWindows()) {
-					WebDriverManager.edgedriver().setup();
-					driver = new EdgeDriver();
-				} else {
-					WebDriverManager.safaridriver().setup();
-					driver = new SafariDriver();
-				}
-			}
-			default -> {
-				if (isWindows()) {
-					WebDriverManager.edgedriver().setup();
-					driver = new EdgeDriver();
-				} else if (isMac()) {
-					WebDriverManager.safaridriver().setup();
-					driver = new SafariDriver();
-				}
-				else {
-					WebDriverManager.chromedriver().setup();
-					driver = new ChromeDriver();
-				}
-			}
 		}
-		
+		}
+
 		driver.manage().window().setSize(new Dimension(1700, 1400));
-//		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+
 		return driver;
 
 	}
-	
+
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot)driver;
+		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		String filePath = userDir + "/reports/" + testCaseName + ".png";
 		File file = new File(filePath);
 		FileUtils.copyFile(src, file);
-		
+
 		return filePath;
 	}
-	
+
 	// Extent reports
-	
-	
+
 	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
 		// read Json to string
 		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
 		// string to HashMap - need mvn dependency Jackson Databind
 		ObjectMapper mapper = new ObjectMapper();
-		List<HashMap<String, String>> data = mapper.readValue(jsonContent,new TypeReference<List<HashMap<String, String>>>() {
-			
-		});
-		
+		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
+				new TypeReference<List<HashMap<String, String>>>() {
+
+				});
+
 		return data;
 	}
-	
-	@BeforeMethod(alwaysRun=true)
+
+	@BeforeMethod(alwaysRun = true)
 	public MainPageActions launchApp() throws IOException {
 		driver = initializeDriver();
 		mainpageactions = new MainPageActions(driver);
 		mainpageactions.goTo();
 		return mainpageactions;
 	}
-	
-	@AfterMethod(alwaysRun=true)
+
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws InterruptedException {
-		Thread.sleep(3000);
 		driver.quit();
 	}
 
 }
-

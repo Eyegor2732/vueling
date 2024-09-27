@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.vueling.pageobjects.PassengersPageObjects;
 
-public class PassengersPageActions extends PassengersPageObjects{
-	
+public class PassengersPageActions extends PassengersPageObjects {
+
 	WebDriver driver;
 
 	public PassengersPageActions(WebDriver driver) {
@@ -13,8 +13,9 @@ public class PassengersPageActions extends PassengersPageObjects{
 		this.driver = driver;
 	}
 
-	public SeatservicePageActions enterPaxInformation(String name, String surname, String country, String phone, String email) throws InterruptedException {
-		waitForURL("PassengersInformation", 5);
+	public SeatservicePageActions enterPaxInformation(String name, String surname, String country, String phone,
+			String email) throws InterruptedException {
+		waitForURL("PassengersInformation", 10);
 		paxFirstNameInput.sendKeys(name);
 		paxSurNameInput.sendKeys(surname);
 		allsetButton.click();
@@ -23,12 +24,9 @@ public class PassengersPageActions extends PassengersPageObjects{
 		emailInput.sendKeys(email);
 		privacyCheckbox.click();
 		continueButton.click();
-		
+
 		return (new SeatservicePageActions(driver));
-		
-		
+
 	}
 
 }
-
-
